@@ -4,46 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start a Project | MeviQo</title>
 
-    <title>Contact | MeviQo</title>
-    <meta name="description"
-        content="Get in touch with MeviQo for digital marketing, SEO, social media, ads, web development and creative services.">
-
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --bg: #071116;
+            --card: rgba(15, 30, 38, 0.72);
+            --primary: #0292b7;
+            --primary-light: #20b9df;
+            --text: #ffffff;
+            --muted: #8ea1aa;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --bg: #071116;
-            --card: rgba(15, 30, 38, 0.72);
-            --border: rgba(255, 255, 255, 0.09);
-            --text: #ffffff;
-            --muted: #94a3b8;
-            --primary: #0292b7;
-            --primary-light: #20b9df;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            min-height: 100vh;
             font-family: 'Outfit', sans-serif;
-            color: var(--text);
             background:
-                radial-gradient(circle at 15% 15%, rgba(2, 146, 183, 0.13), transparent 30%),
-                radial-gradient(circle at 85% 80%, rgba(2, 146, 183, 0.09), transparent 30%),
-                #071116;
+                radial-gradient(circle at 15% 10%, rgba(2, 146, 183, 0.12), transparent 30%),
+                radial-gradient(circle at 85% 80%, rgba(2, 146, 183, 0.08), transparent 30%),
+                var(--bg);
+            color: var(--text);
+            min-height: 100vh;
         }
 
-        /* =========================
-           NAVBAR
-        ========================= */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
         .navbar {
             width: 100%;
@@ -51,73 +52,61 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border-bottom: 1px solid var(--border);
         }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
+            font-size: 25px;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
 
         .logo-icon {
-            width: 34px;
-            height: 34px;
+            width: 12px;
+            height: 12px;
             border: 2px solid var(--primary-light);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-light);
-            font-size: 15px;
-            box-shadow: 0 0 20px rgba(2, 146, 183, 0.18);
+            transform: rotate(45deg);
+            box-shadow: 0 0 14px rgba(2, 146, 183, 0.5);
         }
 
         .back-link {
-            color: #cbd5e1;
-            text-decoration: none;
+            color: var(--muted);
             font-size: 14px;
-            transition: 0.25s ease;
+            transition: 0.3s;
         }
 
         .back-link:hover {
             color: var(--primary-light);
         }
 
-        /* =========================
-           MAIN
-        ========================= */
-
-        .page {
-            width: 100%;
-            padding: 45px 20px 80px;
+        .container {
+            width: min(900px, 92%);
+            margin: auto;
+            padding: 75px 0 50px;
         }
 
         .intro {
-            max-width: 850px;
-            margin: 0 auto 30px;
             text-align: center;
+            margin-bottom: 45px;
         }
 
         .eyebrow {
-            display: inline-block;
-            margin-bottom: 12px;
             color: var(--primary-light);
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
         }
 
         .intro h1 {
-            font-size: clamp(34px, 5vw, 52px);
-            line-height: 1.05;
-            letter-spacing: -1.5px;
-            margin-bottom: 15px;
+            font-size: clamp(38px, 6vw, 62px);
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 18px;
         }
 
         .intro h1 span {
@@ -125,285 +114,166 @@
         }
 
         .intro p {
-            max-width: 600px;
+            max-width: 620px;
             margin: auto;
             color: var(--muted);
-            font-size: 15px;
+            font-size: 16px;
             line-height: 1.7;
         }
 
-        /* =========================
-           FORM CARD
-        ========================= */
-
-        .meviqo-form {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 38px;
+        .form-card {
             background: var(--card);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
             border: 1px solid var(--border);
             border-radius: 24px;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow:
-                0 25px 80px rgba(0, 0, 0, 0.35),
-                inset 0 1px 0 rgba(255, 255, 255, 0.03);
-        }
-
-        .form-header {
-            margin-bottom: 30px;
+            padding: 40px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
         }
 
         .form-title {
-            margin-bottom: 8px;
-            color: #fff;
-            font-size: 27px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 32px;
         }
 
-        .form-subtitle {
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.6;
+        .section {
+            margin-bottom: 35px;
         }
 
-        /* =========================
-           SECTION
-        ========================= */
-
-        .form-section {
-            margin-top: 30px;
-        }
-
-        .form-section:first-of-type {
-            margin-top: 0;
-        }
-
-        .form-section-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 16px;
+        .section-title {
             color: var(--primary-light);
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.2px;
+            margin-bottom: 20px;
         }
 
-        .form-section-title::before {
-            content: "";
-            width: 20px;
-            height: 1px;
-            background: var(--primary-light);
-        }
-
-        .form-grid {
+        .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
+            gap: 20px;
         }
 
-        .form-group {
+        .field {
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
 
-        .form-group.full {
+        .field.full {
             grid-column: 1 / -1;
         }
 
-        .form-group label {
-            color: #e2e8f0;
+        label {
             font-size: 13px;
+            color: #c8d3d8;
             font-weight: 500;
         }
 
-        .required {
-            color: var(--primary-light);
-        }
-
-        /* =========================
-           INPUTS
-        ========================= */
-
-        .meviqo-form input,
-        .meviqo-form select,
-        .meviqo-form textarea {
+        input,
+        select,
+        textarea {
             width: 100%;
-            padding: 14px 15px;
-            color: #fff;
-            background: rgba(255, 255, 255, 0.045);
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            border-radius: 11px;
+            border: 1px solid var(--border);
             outline: none;
+            border-radius: 11px;
+            background: rgba(255, 255, 255, 0.035);
+            color: white;
+            padding: 14px 15px;
             font-family: inherit;
             font-size: 14px;
-            transition: all 0.25s ease;
+            transition: 0.3s;
         }
 
-        .meviqo-form input::placeholder,
-        .meviqo-form textarea::placeholder {
-            color: #64748b;
+        input::placeholder,
+        textarea::placeholder {
+            color: #65777f;
         }
 
-        .meviqo-form input:focus,
-        .meviqo-form select:focus,
-        .meviqo-form textarea:focus {
-            border-color: var(--primary);
-            background: rgba(2, 146, 183, 0.055);
-            box-shadow: 0 0 0 3px rgba(2, 146, 183, 0.09);
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: rgba(2, 146, 183, 0.7);
+            box-shadow: 0 0 0 3px rgba(2, 146, 183, 0.08);
         }
 
-        .meviqo-form select {
+        select {
             cursor: pointer;
         }
 
-        .meviqo-form select option {
-            background: #0f1e26;
-            color: #fff;
+        select option {
+            background: #0b1b22;
+            color: white;
         }
 
-        .meviqo-form textarea {
-            min-height: 145px;
+        textarea {
             resize: vertical;
+            min-height: 145px;
         }
-
-        .form-note {
-            color: #64748b;
-            font-size: 11px;
-            line-height: 1.5;
-        }
-
-        /* =========================
-           BUTTON
-        ========================= */
 
         .submit-btn {
             width: 100%;
-            margin-top: 28px;
-            padding: 15px 20px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-
-            color: #fff;
-            background: linear-gradient(135deg,
-                    #0292b7,
-                    #017896);
-
             border: none;
-            border-radius: 11px;
-
+            border-radius: 12px;
+            padding: 16px 22px;
+            background: var(--primary);
+            color: white;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
-
             cursor: pointer;
-
-            box-shadow:
-                0 10px 30px rgba(2, 146, 183, 0.18);
-
-            transition: all 0.25s ease;
-        }
-
-        .submit-btn span {
-            font-size: 18px;
-            transition: transform 0.25s ease;
+            transition: 0.3s;
+            margin-top: 5px;
         }
 
         .submit-btn:hover {
+            background: var(--primary-light);
             transform: translateY(-2px);
-            box-shadow:
-                0 15px 40px rgba(2, 146, 183, 0.30);
+            box-shadow: 0 10px 25px rgba(2, 146, 183, 0.2);
         }
 
-        .submit-btn:hover span {
-            transform: translateX(4px);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .privacy-note {
-            margin-top: 15px;
+        .privacy {
             text-align: center;
-            color: #64748b;
-            font-size: 11px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        .footer {
-            margin-top: 35px;
-            text-align: center;
-            color: #475569;
+            color: #65777f;
             font-size: 12px;
+            line-height: 1.6;
+            margin-top: 18px;
         }
 
-        .footer span {
-            color: #64748b;
+        footer {
+            text-align: center;
+            color: #52636a;
+            font-size: 13px;
+            padding: 25px 0 35px;
         }
-
-        /* =========================
-           MOBILE
-        ========================= */
 
         @media (max-width: 650px) {
-
             .navbar {
-                padding: 20px;
+                padding: 20px 5%;
             }
 
-            .logo {
-                font-size: 21px;
+            .container {
+                width: 92%;
+                padding-top: 55px;
             }
 
-            .logo-icon {
-                width: 30px;
-                height: 30px;
+            .form-card {
+                padding: 25px 20px;
+                border-radius: 18px;
             }
 
-            .back-link {
-                font-size: 13px;
-            }
-
-            .page {
-                padding: 35px 15px 55px;
-            }
-
-            .intro {
-                margin-bottom: 25px;
-            }
-
-            .intro h1 {
-                font-size: 36px;
-            }
-
-            .meviqo-form {
-                padding: 25px 18px;
-                border-radius: 20px;
-            }
-
-            .form-grid {
+            .grid {
                 grid-template-columns: 1fr;
-                gap: 16px;
             }
 
-            .form-group.full {
+            .field.full {
                 grid-column: auto;
             }
 
-            .form-title {
-                font-size: 24px;
+            .intro h1 {
+                letter-spacing: -1px;
             }
         }
     </style>
@@ -411,466 +281,236 @@
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================= -->
-
-    <header class="navbar">
-
+    <nav class="navbar">
         <a href="index.html" class="logo">
-            <div class="logo-icon">⬡</div>
+            <span class="logo-icon"></span>
             MeviQo
         </a>
 
         <a href="index.html" class="back-link">
             ← Back to website
         </a>
+    </nav>
 
-    </header>
 
-
-    <!-- =========================
-         MAIN
-    ========================= -->
-
-    <main class="page">
+    <main class="container">
 
         <div class="intro">
-
-            <div class="eyebrow">
-                Start a conversation
-            </div>
+            <div class="eyebrow">Let's Work Together</div>
 
             <h1>
-                Let's build something
-                <span>great.</span>
+                Start a <span>conversation.</span>
             </h1>
 
             <p>
-                Tell us about your project, goals, and what you need help with.
-                We'll review your inquiry and get back to you soon.
+                Tell us about your project, goals, and ideas.
+                We'll review your requirements and get back to you
+                with the next steps.
             </p>
-
         </div>
 
 
-        <!-- =========================
-             CONTACT FORM
-        ========================= -->
+        <div class="form-card">
 
-        <form class="meviqo-form" action="https://formsubmit.co/meviqostudio@gmail.com" method="POST">
-
-            <!-- Form Settings -->
-
-            <input type="hidden" name="_subject" value="New Client Inquiry | MeviQo">
-
-            <input type="hidden" name="_captcha" value="false">
-
-            <input type="hidden" name="_template" value="table">
-
-            <input type="hidden" name="_next" value="thank-you.html">
+            <h2 class="form-title">Project inquiry</h2>
 
 
-            <div class="form-header">
+            <!-- FORM -->
+            <form class="meviqo-form" action="https://formsubmit.co/meviqostudio@gmail.com" method="POST">
 
-                <h2 class="form-title">
-                    Project inquiry
-                </h2>
+                <!-- FormSubmit Settings -->
+                <input type="hidden" name="_subject" value="New Client Inquiry | MeviQo">
 
-                <p class="form-subtitle">
-                    A few details will help us understand your project better.
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_template" value="table">
+
+                <!-- IMPORTANT: Redirect after submission -->
+                <input type="hidden" name="_next" value="https://meviqo.vercel.app/thank-you.html">
+
+
+                <!-- CONTACT INFORMATION -->
+                <div class="section">
+
+                    <div class="section-title">
+                        Contact Information
+                    </div>
+
+                    <div class="grid">
+
+                        <div class="field">
+                            <label for="name">
+                                Full Name *
+                            </label>
+
+                            <input type="text" id="name" name="Full Name" placeholder="Your full name" required>
+                        </div>
+
+
+                        <div class="field">
+                            <label for="email">
+                                Email Address *
+                            </label>
+
+                            <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+                        </div>
+
+
+                        <div class="field">
+                            <label for="phone">
+                                Phone / WhatsApp
+                            </label>
+
+                            <input type="tel" id="phone" name="Phone / WhatsApp" placeholder="+880 1XXXXXXXXX">
+                        </div>
+
+
+                        <div class="field">
+                            <label for="country">
+                                Country *
+                            </label>
+
+                            <select id="country" name="Country" required>
+                                <option value="" selected disabled>
+                                    Select your country
+                                </option>
+
+                                <option>Bangladesh</option>
+                                <option>India</option>
+                                <option>Pakistan</option>
+                                <option>Nepal</option>
+                                <option>Sri Lanka</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>Canada</option>
+                                <option>Australia</option>
+                                <option>Germany</option>
+                                <option>France</option>
+                                <option>Italy</option>
+                                <option>Spain</option>
+                                <option>United Arab Emirates</option>
+                                <option>Saudi Arabia</option>
+                                <option>Qatar</option>
+                                <option>Singapore</option>
+                                <option>Malaysia</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT DETAILS -->
+                <div class="section">
+
+                    <div class="section-title">
+                        Project Details
+                    </div>
+
+                    <div class="grid">
+
+                        <div class="field">
+                            <label for="company">
+                                Company / Brand Name
+                            </label>
+
+                            <input type="text" id="company" name="Company / Brand" placeholder="Your company or brand">
+                        </div>
+
+
+                        <div class="field">
+                            <label for="service">
+                                Service Interested In *
+                            </label>
+
+                            <select id="service" name="Service Interested In" required>
+                                <option value="" selected disabled>
+                                    Select a service
+                                </option>
+
+                                <option>Digital Marketing</option>
+                                <option>Social Media Marketing</option>
+                                <option>SEO</option>
+                                <option>Meta Ads</option>
+                                <option>Google / YouTube Ads</option>
+                                <option>Web Development</option>
+                                <option>Video Editing</option>
+                                <option>Content Creation</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+
+                        <div class="field">
+                            <label for="website">
+                                Website / Social Media
+                            </label>
+
+                            <input type="text" id="website" name="Website / Social Media" placeholder="https://...">
+                        </div>
+
+
+                        <div class="field">
+                            <label for="budget">
+                                Estimated Budget
+                            </label>
+
+                            <select id="budget" name="Estimated Budget">
+                                <option value="" selected disabled>
+                                    Select a range
+                                </option>
+
+                                <option>Under $100</option>
+                                <option>$100 – $250</option>
+                                <option>$250 – $500</option>
+                                <option>$500 – $1,000</option>
+                                <option>$1,000+</option>
+                                <option>Not decided yet</option>
+                            </select>
+                        </div>
+
+
+                        <div class="field full">
+
+                            <label for="message">
+                                Tell us about your project *
+                            </label>
+
+                            <textarea id="message" name="Project Details"
+                                placeholder="Tell us about your project, goals, requirements, timeline, or anything else you'd like us to know..."
+                                required></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button type="submit" class="submit-btn">
+                    Send Message →
+                </button>
+
+
+                <p class="privacy">
+                    By submitting this form, you agree that MeviQo may
+                    contact you regarding your inquiry. Your information
+                    will only be used to respond to your request.
                 </p>
 
-            </div>
+            </form>
 
-
-            <!-- =========================
-                 CONTACT INFORMATION
-            ========================= -->
-
-            <div class="form-section">
-
-                <div class="form-section-title">
-                    Contact Information
-                </div>
-
-                <div class="form-grid">
-
-                    <!-- Full Name -->
-
-                    <div class="form-group">
-
-                        <label for="name">
-                            Full Name
-                            <span class="required">*</span>
-                        </label>
-
-                        <input type="text" id="name" name="Full Name" placeholder="Your name" autocomplete="name"
-                            required>
-
-                    </div>
-
-
-                    <!-- Email -->
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            Email Address
-                            <span class="required">*</span>
-                        </label>
-
-                        <input type="email" id="email" name="Email" placeholder="you@example.com" autocomplete="email"
-                            required>
-
-                    </div>
-
-
-                    <!-- Phone -->
-
-                    <div class="form-group">
-
-                        <label for="phone">
-                            Phone / WhatsApp
-                        </label>
-
-                        <input type="tel" id="phone" name="Phone / WhatsApp" placeholder="+880 1XXXXXXXXX"
-                            autocomplete="tel">
-
-                    </div>
-
-
-                    <!-- Country -->
-
-                    <div class="form-group">
-
-                        <label for="country">
-                            Country
-                            <span class="required">*</span>
-                        </label>
-
-                        <select id="country" name="Country" required>
-
-                            <option value="">
-                                Select your country
-                            </option>
-
-                            <option value="Afghanistan">🇦🇫 Afghanistan</option>
-                            <option value="Albania">🇦🇱 Albania</option>
-                            <option value="Algeria">🇩🇿 Algeria</option>
-                            <option value="Andorra">🇦🇩 Andorra</option>
-                            <option value="Angola">🇦🇴 Angola</option>
-                            <option value="Argentina">🇦🇷 Argentina</option>
-                            <option value="Armenia">🇦🇲 Armenia</option>
-                            <option value="Australia">🇦🇺 Australia</option>
-                            <option value="Austria">🇦🇹 Austria</option>
-                            <option value="Azerbaijan">🇦🇿 Azerbaijan</option>
-                            <option value="Bahamas">🇧🇸 Bahamas</option>
-                            <option value="Bahrain">🇧🇭 Bahrain</option>
-                            <option value="Bangladesh">🇧🇩 Bangladesh</option>
-                            <option value="Barbados">🇧🇧 Barbados</option>
-                            <option value="Belarus">🇧🇾 Belarus</option>
-                            <option value="Belgium">🇧🇪 Belgium</option>
-                            <option value="Belize">🇧🇿 Belize</option>
-                            <option value="Bhutan">🇧🇹 Bhutan</option>
-                            <option value="Bolivia">🇧🇴 Bolivia</option>
-                            <option value="Brazil">🇧🇷 Brazil</option>
-                            <option value="Brunei">🇧🇳 Brunei</option>
-                            <option value="Bulgaria">🇧🇬 Bulgaria</option>
-                            <option value="Cambodia">🇰🇭 Cambodia</option>
-                            <option value="Cameroon">🇨🇲 Cameroon</option>
-                            <option value="Canada">🇨🇦 Canada</option>
-                            <option value="Chile">🇨🇱 Chile</option>
-                            <option value="China">🇨🇳 China</option>
-                            <option value="Colombia">🇨🇴 Colombia</option>
-                            <option value="Costa Rica">🇨🇷 Costa Rica</option>
-                            <option value="Croatia">🇭🇷 Croatia</option>
-                            <option value="Cuba">🇨🇺 Cuba</option>
-                            <option value="Cyprus">🇨🇾 Cyprus</option>
-                            <option value="Czechia">🇨🇿 Czechia</option>
-                            <option value="Denmark">🇩🇰 Denmark</option>
-                            <option value="Dominican Republic">🇩🇴 Dominican Republic</option>
-                            <option value="Ecuador">🇪🇨 Ecuador</option>
-                            <option value="Egypt">🇪🇬 Egypt</option>
-                            <option value="Estonia">🇪🇪 Estonia</option>
-                            <option value="Ethiopia">🇪🇹 Ethiopia</option>
-                            <option value="Finland">🇫🇮 Finland</option>
-                            <option value="France">🇫🇷 France</option>
-                            <option value="Georgia">🇬🇪 Georgia</option>
-                            <option value="Germany">🇩🇪 Germany</option>
-                            <option value="Ghana">🇬🇭 Ghana</option>
-                            <option value="Greece">🇬🇷 Greece</option>
-                            <option value="Hungary">🇭🇺 Hungary</option>
-                            <option value="Iceland">🇮🇸 Iceland</option>
-                            <option value="India">🇮🇳 India</option>
-                            <option value="Indonesia">🇮🇩 Indonesia</option>
-                            <option value="Iran">🇮🇷 Iran</option>
-                            <option value="Iraq">🇮🇶 Iraq</option>
-                            <option value="Ireland">🇮🇪 Ireland</option>
-                            <option value="Israel">🇮🇱 Israel</option>
-                            <option value="Italy">🇮🇹 Italy</option>
-                            <option value="Jamaica">🇯🇲 Jamaica</option>
-                            <option value="Japan">🇯🇵 Japan</option>
-                            <option value="Jordan">🇯🇴 Jordan</option>
-                            <option value="Kazakhstan">🇰🇿 Kazakhstan</option>
-                            <option value="Kenya">🇰🇪 Kenya</option>
-                            <option value="Kuwait">🇰🇼 Kuwait</option>
-                            <option value="Lebanon">🇱🇧 Lebanon</option>
-                            <option value="Libya">🇱🇾 Libya</option>
-                            <option value="Lithuania">🇱🇹 Lithuania</option>
-                            <option value="Luxembourg">🇱🇺 Luxembourg</option>
-                            <option value="Malaysia">🇲🇾 Malaysia</option>
-                            <option value="Maldives">🇲🇻 Maldives</option>
-                            <option value="Malta">🇲🇹 Malta</option>
-                            <option value="Mexico">🇲🇽 Mexico</option>
-                            <option value="Moldova">🇲🇩 Moldova</option>
-                            <option value="Monaco">🇲🇨 Monaco</option>
-                            <option value="Mongolia">🇲🇳 Mongolia</option>
-                            <option value="Montenegro">🇲🇪 Montenegro</option>
-                            <option value="Morocco">🇲🇦 Morocco</option>
-                            <option value="Myanmar">🇲🇲 Myanmar</option>
-                            <option value="Nepal">🇳🇵 Nepal</option>
-                            <option value="Netherlands">🇳🇱 Netherlands</option>
-                            <option value="New Zealand">🇳🇿 New Zealand</option>
-                            <option value="Nigeria">🇳🇬 Nigeria</option>
-                            <option value="North Korea">🇰🇵 North Korea</option>
-                            <option value="Norway">🇳🇴 Norway</option>
-                            <option value="Oman">🇴🇲 Oman</option>
-                            <option value="Pakistan">🇵🇰 Pakistan</option>
-                            <option value="Palestine">🇵🇸 Palestine</option>
-                            <option value="Panama">🇵🇦 Panama</option>
-                            <option value="Peru">🇵🇪 Peru</option>
-                            <option value="Philippines">🇵🇭 Philippines</option>
-                            <option value="Poland">🇵🇱 Poland</option>
-                            <option value="Portugal">🇵🇹 Portugal</option>
-                            <option value="Qatar">🇶🇦 Qatar</option>
-                            <option value="Romania">🇷🇴 Romania</option>
-                            <option value="Russia">🇷🇺 Russia</option>
-                            <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
-                            <option value="Serbia">🇷🇸 Serbia</option>
-                            <option value="Singapore">🇸🇬 Singapore</option>
-                            <option value="Slovakia">🇸🇰 Slovakia</option>
-                            <option value="Slovenia">🇸🇮 Slovenia</option>
-                            <option value="South Africa">🇿🇦 South Africa</option>
-                            <option value="South Korea">🇰🇷 South Korea</option>
-                            <option value="Spain">🇪🇸 Spain</option>
-                            <option value="Sri Lanka">🇱🇰 Sri Lanka</option>
-                            <option value="Sudan">🇸🇩 Sudan</option>
-                            <option value="Sweden">🇸🇪 Sweden</option>
-                            <option value="Switzerland">🇨🇭 Switzerland</option>
-                            <option value="Syria">🇸🇾 Syria</option>
-                            <option value="Taiwan">🇹🇼 Taiwan</option>
-                            <option value="Thailand">🇹🇭 Thailand</option>
-                            <option value="Tunisia">🇹🇳 Tunisia</option>
-                            <option value="Turkey">🇹🇷 Turkey</option>
-                            <option value="Ukraine">🇺🇦 Ukraine</option>
-                            <option value="United Arab Emirates">🇦🇪 United Arab Emirates</option>
-                            <option value="United Kingdom">🇬🇧 United Kingdom</option>
-                            <option value="United States">🇺🇸 United States</option>
-                            <option value="Uruguay">🇺🇾 Uruguay</option>
-                            <option value="Uzbekistan">🇺🇿 Uzbekistan</option>
-                            <option value="Venezuela">🇻🇪 Venezuela</option>
-                            <option value="Vietnam">🇻🇳 Vietnam</option>
-                            <option value="Yemen">🇾🇪 Yemen</option>
-                            <option value="Zambia">🇿🇲 Zambia</option>
-                            <option value="Zimbabwe">🇿🇼 Zimbabwe</option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- =========================
-                 PROJECT DETAILS
-            ========================= -->
-
-            <div class="form-section">
-
-                <div class="form-section-title">
-                    Project Details
-                </div>
-
-                <div class="form-grid">
-
-                    <!-- Company -->
-
-                    <div class="form-group">
-
-                        <label for="company">
-                            Company / Brand Name
-                        </label>
-
-                        <input type="text" id="company" name="Company / Brand" placeholder="Your brand or company">
-
-                    </div>
-
-
-                    <!-- Service -->
-
-                    <div class="form-group">
-
-                        <label for="service">
-                            Service Interested In
-                            <span class="required">*</span>
-                        </label>
-
-                        <select id="service" name="Service" required>
-
-                            <option value="">
-                                Select a service
-                            </option>
-
-                            <option value="Digital Marketing">
-                                Digital Marketing
-                            </option>
-
-                            <option value="Social Media Marketing">
-                                Social Media Marketing
-                            </option>
-
-                            <option value="SEO">
-                                SEO
-                            </option>
-
-                            <option value="Meta Ads">
-                                Meta Ads
-                            </option>
-
-                            <option value="Google / YouTube Ads">
-                                Google / YouTube Ads
-                            </option>
-
-                            <option value="Web Development">
-                                Web Development
-                            </option>
-
-                            <option value="Video Editing">
-                                Video Editing
-                            </option>
-
-                            <option value="Content Creation">
-                                Content Creation
-                            </option>
-
-                            <option value="Multiple Services">
-                                Multiple Services
-                            </option>
-
-                            <option value="Other">
-                                Other
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- Website -->
-
-                    <div class="form-group">
-
-                        <label for="website">
-                            Website / Social Media
-                        </label>
-
-                        <input type="url" id="website" name="Website / Social Media"
-                            placeholder="https://yourwebsite.com">
-
-                    </div>
-
-
-                    <!-- Budget -->
-
-                    <div class="form-group">
-
-                        <label for="budget">
-                            Estimated Budget
-                        </label>
-
-                        <select id="budget" name="Budget">
-
-                            <option value="">
-                                Select your budget
-                            </option>
-
-                            <option value="Under $100">
-                                Under $100
-                            </option>
-
-                            <option value="$100 - $300">
-                                $100 - $300
-                            </option>
-
-                            <option value="$300 - $500">
-                                $300 - $500
-                            </option>
-
-                            <option value="$500 - $1,000">
-                                $500 - $1,000
-                            </option>
-
-                            <option value="$1,000+">
-                                $1,000+
-                            </option>
-
-                            <option value="Not sure yet">
-                                Not sure yet
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- Message -->
-
-                    <div class="form-group full">
-
-                        <label for="message">
-                            Tell us about your project
-                            <span class="required">*</span>
-                        </label>
-
-                        <textarea id="message" name="Project Details"
-                            placeholder="Tell us what you need help with, your goals, timeline, or anything else you'd like us to know..."
-                            required></textarea>
-
-                        <span class="form-note">
-                            The more details you provide, the better we can understand your project.
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- =========================
-                 SUBMIT
-            ========================= -->
-
-            <button type="submit" class="submit-btn">
-                Send Message
-                <span>→</span>
-            </button>
-
-            <p class="privacy-note">
-                Your information is only used to respond to your inquiry.
-            </p>
-
-        </form>
-
-
-        <div class="footer">
-            © 2026 MeviQo <span>•</span> Building Tomorrow, Today.
         </div>
 
     </main>
+
+
+    <footer>
+        © 2026 MeviQo • Building Tomorrow, Today.
+    </footer>
 
 </body>
 
