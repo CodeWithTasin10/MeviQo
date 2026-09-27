@@ -1,0 +1,38 @@
+body {
+            background-color: #0a0f18;
+            /* Deep cinematic dark */
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Classes */
+        .glass {
+            background: rgba(51, 65, 85, 0.15);
+            /* #334155 with opacity */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(2, 146, 183, 0.2);
+            /* #0292b7 with opacity */
+        }
+
+        .glass-hover:hover {
+            background: rgba(51, 65, 85, 0.3);
+            border-color: rgba(2, 146, 183, 0.6);
+            box-shadow: 0 0 20px rgba(2, 146, 183, 0.15);
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #fff, #0292b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Background Glow Orbs */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.4;
+        }
